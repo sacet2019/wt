@@ -18,7 +18,7 @@
       die('Query Error: ' . mysqli_error());
 	while($row = mysqli_fetch_row($result) ) 
 	{   
-	echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row                                       	 [2]."</td><td>".$row[3]."</td></tr>";
+	echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
 	}
 	mysqli_close($conn); 
 ?>
