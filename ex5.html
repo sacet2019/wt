@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Design a HTML having a text box and four buttons </title>
+</head>
+<body bgcolor="pink">
+<br><br>
+<h2><font  color="red"> Design a HTML having a text box and four buttons viz Factorial,  Prime, Palindrome and Fibonacci</h2></font> 
+<script type="text/javascript"> 
+function fact1(num)
+{
+var i, fact=1;
+for(i=1; i<=num; i++)  
+{
+fact= fact*i;
+}  
+document.writeln("Factorial of a given Number "+num+" is: "+ fact);
+}
+</script> 
+<script type="text/javascript">
+function prime1(num)
+{
+var i,count,k,n1; 
+document.writeln("Prime Numbers:");
+for(count=1;count<=num;count++)
+{
+	i=1; 
+	k=0;
+ 	n1=count; 
+	while(i<=n1)  
+	{
+	 if(n1%i==0)
+	k++;
+	i++;
+	}
+	if(k==2)
+	document.writeln(count+"  ");
+}
+	
+}
+ </script> 
+<script>
+    var flag=0,str;
+  function palin1(str) 
+    {   
+          var len = str.length; 
+      for (var i = 0; i<len/2; i++) 
+       {  
+        if (str[i]!=str[len-i-1]) 
+        {  
+            flag=1;
+            break;  
+        }
+      }
+        if(flag==0)
+     alert(str+" "+"is a Palindrome");
+      else
+     alert(str+" "+"is not a Palindrome");
+ }
+</script>
+<script>
+function fibo(num)
+{
+var i=0,j=1,f; 
+document.writeln("Fibonacci series up to that number:   "+i+"  "+j);
+f=i+j; 
+while(f<num)
+{
+document.writeln("  "+f);
+i=j;
+j=f;
+f=i+j;
+}
+}
+</script>
+<form name="form1" onsubmit="fact1(form1.text1.value)">
+Enter a Number: 
+<input type="text" name="text1">
+<input type="submit" value="FACTORIAL">
+</form>
+<form name="form2" onsubmit="prime1(form2.text2.value)">
+Enter the range for Prime Numbers: 
+<input type="text" name="text2">
+<input type="submit" value="PRIME">
+</form>
+<form name="form3" onsubmit="palin1(form3.text3.value)">
+Enter a String or Number: 
+<input type="text" name="text3">
+<input type="submit" value="PALINDROME">
+</form>
+<form name="form4" onsubmit="fibo(form4.text4.value)">
+Enter a  Number: 
+<input type="text" name="text4">
+<input type="submit" value="FIBONACCI">
+</form>
+</body>
+</html>

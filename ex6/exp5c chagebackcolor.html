@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function random_colors()
+ {
+ var letters = '0123456789ABCDEF'.split('');
+ var color = '#'; 	//color format: "#0000FF",
+ for (var i = 0; i < 6; i++ ) 
+{
+  color += letters[Math.round(Math.random() * 15)];  //random color generator
+ }
+ document.body.style.background= color;
+}
+</script>
+</head>
+<body bgcolor="cyan" style = "text-align:center;font-weight:bold;color:fuchsia">
+<b><br><br> 
+<h1><b>Click the button to change background color</b></h1>
+<b><br><br><button onclick="random_colors()"> <h2 style = "color:indigo;">Change Background Color </button>  
+</body>
+</html> 

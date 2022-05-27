@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+function showInfo(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtInfo").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtInfo").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "ajax2.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<body>
+<center>
+<br>
+<h2>INTEGRATING AJAX AND PHP  </h2>
+<p><b>Enter Character in the Input Field </b></p>
+<form> 
+Name: <input type="text" onkeyup="showInfo(this.value)">
+</form>
+<p>Names List: <span id="txtInfo"></span></p>
+</center>
+</body>
+</html>

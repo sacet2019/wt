@@ -1,0 +1,75 @@
+<html>
+<head>
+<script language="javascript">
+function validation()
+{
+	var name=reg.name.value;
+	var pwd=reg.pwd.value;
+	var phno=reg.phno.value;
+	var phlen=phno.length;
+	var pwdlen=pwd.length;
+	var namelen=name.length;
+	if(namelen<6)
+	{
+		alert("The name Field Should be minimum 6 character length");
+	
+		if(pwdlen>6)
+		{
+		alert("Password Should not be more than 6 character length");
+		if(phlen!=10)
+		{
+			alert("Phonumber Length must be 10 digits length");
+		}	
+		}
+	
+	}
+                    else
+	alert("Registration is successful");
+	
+
+}
+</script>
+</head>
+<body bgcolor="pink">
+<br>
+<h2>VALIDATING REGISTRATION PAGE</h2>
+<form name="reg" >
+<table border=1 >
+<caption> Enter The Values into the fields </caption>
+<tr><td>Enter Name(min 6 chars)</td><td><input type="text" name="name" value="" ></td><tr>
+<tr><td>Enter Pasword(not more than 6)</td><td><input type="password" name="pwd" value="" ></td><tr>
+<tr><td>Enter E-mail ID</td><td><input type="text" name="eid" value="" ></td><tr>
+<tr><td>Enter Phone Number(10 Digits)</td><td><input type="text" name="phno" value="" ></td><tr>
+<tr><td>Enter Gender</td><td><input type="radio" name="g" value="" >Male<br><input type="radio" name="g" value="" >Female<br></td><tr>
+<tr><td>Enter Date Of birth(dd/mm/yyyy)</td><td>
+	<select type="text" name="dob" value="" >
+	<option value="select">SELECT</option>
+	<option value=1>1</<option>
+	<option value=2>2</<option>
+	<option value=3>3</<option>
+	<option value=3>4</<option>
+	</select>
+	<select name="month">
+	<option value="select1">SELECT</option>
+	<option value="jan">JANUARY</option>
+	<option value="feb">FEBRUARY</option>
+	<option value="mar">MARCH</option>
+	<option value="apr">APRIL</option>
+	</select>
+	<select name="year">
+	<option value="select2">SELECT</option>
+	<option value="1999">1999</option>
+	<option value="2000">2000</option>
+	<option value="2001">2001</option>
+	<option value="2002">2002</option>
+	</select>
+	</td><tr>
+<tr><td>Languages Known</td><td><input type="checkbox" name="eng" value="1" >English</input><input type="checkbox" name="tel" option="2" value="">Telugu</input>
+	<input type="checkbox" name="hin" option="3" value="">Hindi</input>
+	</td><tr>
+<tr><td>Enter Address</td><td><textarea cols=20  name="add" value="" ></textarea></td><tr>
+<tr><td ><input type="button"  value="submit" onclick="validation()" ></td><td><input type="reset" ></td></tr>  
+</table>
+</form>
+</body>
+</html>

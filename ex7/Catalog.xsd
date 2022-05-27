@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="bookinfo">
+<xs:complexType>
+<xs:sequence>
+<xs:element ref="Book" maxOccurs="unbounded"/>  //there is no maximum number of 
+                                                                                                   occurrences.
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Book">
+<xs:complexType>
+<xs:sequence>
+<xs:element ref="Title" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="Author" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="Publication" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="Edition" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="ISBN" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="Price" minOccurs="1" maxOccurs="1"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Title" type="xs:string"/>
+<xs:element name="Author" type="xs:string"/>
+<xs:element name="Publication" type="xs:string"/>
+<xs:element name="Edition" type="xs:string"/>
+<xs:element name="ISBN" type="xs:string"/>
+<xs:element name="Price" type="xs:string"/>
+</xs:schema>

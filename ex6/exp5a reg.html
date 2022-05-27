@@ -1,0 +1,80 @@
+<html>
+<head>
+<script language="javascript">
+function validation()
+{
+	var name=form1.name.value;
+	var pwd=form1.pwd.value;
+	var phno=form1.phno.value;
+	var phlen=phno.length;
+	var pwdlen=pwd.length;
+	var namelen=name.length;
+	if(namelen<6)
+	{
+		alert("The Name Field Should be Minimum 6 characters ");
+	}
+	
+	else if(pwdlen>6)
+		{
+		alert("Password Should not be more than 6 characters");
+		}
+	else if(phlen!=10)
+		{
+			alert("Phonumber Length must be 10 digits");
+		}	
+		
+	
+	else
+	alert("Registration is successful");
+	
+
+}
+</script>
+</head>
+<body bgcolor="cyan">
+<br>
+<h2>VALIDATION OF REGISTRATION FORM</h2>
+<form name="form1" >
+<table border=1 >
+<caption> Enter the data into the fields </caption>
+<tr><td>Enter Name(min 6 chars)</td><td><input type="text" name="name" value="" ></td></tr>
+<tr><td>Enter Pasword(not more than 6)</td><td><input type="password" name="pwd" value="" ></td></tr>
+<tr><td>Enter Age</td><td><input type="text" name="n1" value="" ></td></tr>
+<tr><td>Enter E-mail ID</td><td><input type="email"/></td></tr>
+<tr><td>Enter Phone Number(10 Digits)</td><td><input type="number" name="phno" value="" ></td></tr>
+<tr><td>Enter Gender</td><td><input type="radio" name="g" value="" >Male<input type="radio" name="g" value="" >Female<br></td></tr>
+<tr><td>Enter Date of Birth(dd/mm/yyyy)</td><td>
+	<select type="text" name="dob" value="" >
+	<option value="select">SELECT</option>
+	<option value=1>1</option>
+	<option value=2>2</option>
+	<option value=3>3</option>
+	<option value=4>4</option>
+	<option value=5>5</option>
+	</select>
+	<select name="month">
+	<option value="select1">SELECT</option>
+	<option value="jan">JANUARY</option>
+	<option value="feb">FEBRUARY</option>
+	<option value="mar">MARCH</option>
+	<option value="apr">APRIL</option>
+	<option value="may">MAY</option>
+	</select>
+	<select name="year">
+	<option value="select2">SELECT</option>
+	<option value="1999">1999</option>
+	<option value="2000">2000</option>
+	<option value="2001">2001</option>
+	<option value="2002">2002</option>
+	<option value="2003">2003</option>
+	</select>
+	</td></tr>
+<tr><td>Languages Known</td><td><input type="checkbox" name="c1" value="java" >JAVA</input><input type="checkbox" name="c2"  value="rust">RUST</input>
+<input type="checkbox" name="c3"  value="php">PHP</input>
+<input type="checkbox" name="c4"  value="ruby">RUBY</input></td></tr>
+<tr><td>Enter Address</td><td><textarea cols=20  name="add" value="" ></textarea></td><tr/>
+<tr><td ><input type="button"  value="Submit" onclick="validation()" ></td><td><input type="reset" value="Reset"></td></tr>  
+</table>
+</form>
+</body>
+</html>
