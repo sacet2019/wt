@@ -3,7 +3,7 @@
 <body>
 <br><br><br><br>
 <table border=1 align=center>
-<form name="login" action="Prg9.php">
+<form name="login" action="Prg9b.php">
 <tr><th colspan=2>REGISTRATION PAGE</th></tr>
 <tr><td>User Name:</td><td><input type="text" name="uname"/></td></tr>
 <tr><td>Password:</td><td><input type="password" name="pwd"/></td></tr>
