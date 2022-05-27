@@ -2,7 +2,7 @@
 <head><title>Login Page</title></head>
 <body>
 <br><br><br>
-<form action="Prg8.php" method="post">
+<form action="Prg9a.php" method="post">
 <table align="center" border="1">
 	<tr><th colspan="2">Login Page</th>
 	<tr><td>User Name:</td><td><input type="text" name="uname"/></td></tr>
